@@ -3,25 +3,32 @@
     padding-bottom: 50%;
     position: relative;
     width: 100%;
-    
 }
+    #Textboxid {
+        height: 150px;
+        width: 300px;
+
+    }
+
 .flex-container {
     display: flex;
-    flex-wrap: nowrap;
- 
+    justify-content: center;
+    flex-wrap: wrap;
+    
   }
   
   .flex-container > div {
 
-    width: 400px;
-    margin: 10px;
+    
     text-align: left;
     line-height: 45px;
     font-size: 15px;
+    float: left;
+    width: 48%;
   }
 
-  .Formular {
-box-align: right;
-
-
-  }
+  @media screen and (max-width: 600px) {
+    .flex-container > div {
+      width: 100%;
+         }
+}
