@@ -1,0 +1,52 @@
+h1 {
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-style: oblique;
+font-size: 2.575em;
+font-weight: normal;
+color:black;
+text-shadow: 5px 3px yellow;
+text-align: center;
+  
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+}
+
+
+.container img {
+
+width: 100%;
+height: 500px;
+filter: grayscale(50%);
+}
+
+
+.container .button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(105, 142, 243, 0.192);
+  color: black;
+  font-size: 26px;
+  padding: 16px 50px;
+  border: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  text-align: center;
+
+}
+
+.container .button:hover {
+  background-color: black;
+  color: white;
+
+}
+
+.container .button:active {
+  background-color: #656b65;
+  box-shadow: 0 8px #666;
+transform: translate3d(4px);
+}
