@@ -8,10 +8,6 @@ body {
   margin-bottom: 0px;
   padding: 0px;
 }
-.header {
-  background: url(http://s3.amazonaws.com/codecademy-content/projects/innovation-cloud/bg.jpg)
-    no-repeat center center;
-}
 .social_media_links {
   display: flex;
   flex-direction: row-reverse;
