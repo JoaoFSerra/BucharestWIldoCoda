@@ -3,6 +3,7 @@ header {
   background-color: yellow;
   border: 1px solid black;
   text-align: center;
+  margin-bottom: 60px;
 }
 body {
   margin-bottom: 0px;
@@ -49,6 +50,7 @@ body {
 footer {
   background: fuchsia;
   color: black;
+  margin-top: 160px;
 }
 
 @media screen and (max-width: 600px) {
@@ -80,4 +82,52 @@ footer {
     margin-bottom: 0px;
     padding: 0px;
   }
+}
+
+ *{box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Make the image to responsive */
+.image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50%;
+}
+
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1; 
+  width: 90%;
+  transition:20ms;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.container:hover .overlay {
+  opacity: 1;
+  z-index: 2;
+   transition: 5ms;
+  transition-delay: 18ms;
+}
+
+.image:hover {
+  transform: scale(1.2);
+  z-index: 1;
+  transition: 5ms;
+  transition-delay: 18ms;
 }
