@@ -3,7 +3,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 font-style: oblique;
 font-size: 2.575em;
 font-weight: normal;
-color:black;
+color:blue;
 text-shadow: 5px 3px yellow;
 text-align: center;
   
@@ -49,4 +49,24 @@ filter: grayscale(50%);
   background-color: #656b65;
   box-shadow: 0 8px #666;
 transform: translate3d(4px);
+}
+  
+div.relative {
+  position: relative;
+  width: 1400px;
+  height: 200px;
+ 
+} 
+
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
 }
