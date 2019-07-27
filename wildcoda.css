@@ -1,3 +1,6 @@
+body {
+  max-height: 100vh;
+}
 h1 {
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-style: oblique;
@@ -11,7 +14,7 @@ text-align: center;
 .container {
   position: relative;
   width: 100%;
-  max-width: 1400px;
+  
 }
 
 
@@ -53,8 +56,7 @@ transform: translate3d(4px);
   
 div.relative {
   position: relative;
-  width: 1400px;
-  height: 200px;
+  
  
 } 
 
