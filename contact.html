@@ -4,101 +4,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="contact.css">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            box-sizing: border-box;
+            transition: .5s ease;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*
+        .banner {
+            height: 5px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        */
+        
+        #map {
+            margin-top: 30px;
+            height: 50%;
+            padding-bottom: 60%;
+            position: relative;
+        }
+        
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("images/Biserica_Stavropoleos.jpg");
+            min-height: 100vh;
+            padding: 50px 16px 0 16px;
+        }
+        
+        .form-area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        .left-text {
+            color: white;
+        }
+        
+        .map-area {
+            background-position: center;
+            background-size: cover;
+            padding: 12px 12px 12px 12px;
+            /*  width: 100%;*/
+        }
+        
+        .left-text input {
+            padding: 12px 12px 12px 12px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .left-text textarea {
+            display: inline-block;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            margin: auto;
+            width: 100%;
+        }
+        
+        button {
+            background-color: black;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 80px;
+            margin-top: 30px;
+            display: inline-block;
+        }
+        
+        button:hover {
+            background-color: #505350;
+        }
+        
+        .biography {
+            font-size: 20px;
+            color: rgb(252, 250, 250);
+            margin-top: 0px;
+            padding-left: 25px;
+            padding-right: 25px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        .biography h3 {
+            text-align: center;
+        }
+        
+        .image {
+            max-width: 100%;
+        }
+        
+        @media screen and (max-width: 800px) {
+            #form-area {
+                flex-direction: column;
+            }
+        }
+    </style>
+
 </head>
-
-<body background="IMG_1693.jpg">
-
+<header>
 
 
-    <div class="Biography">
-        <p>My philosophy!</p>
-        <p>A photographer’s job is much more than taking just pictures, it's about finding the right tunes. I have an inherent ability to realize and capture compositions to show the world what the naked eye can sometimes not see. From doing fashion photography
-            to capturing the beautiful world that nature has given to man, I have done it all. </p>
+</header>
+
+<body>
 
 
 
 
 
-        <header>
-            <h2>Let's get in touch!</h2>
 
-        </header>
-    </div>
-    <div class="container">
-        <form action="/action_page.php">
 
-            <legend>
-                <h5>Contact Us</h5>
-            </legend>
-            <div class="row">
-                <div class="col-20">
-                    <label for="fname">First Name</label>
+    <div class="wrapper">
+
+
+
+        <div>
+            <!--
+            <div class="banner">
+
+                <img src="Biserica_Stavropoleos.jpg" class="image" width="100%" height="582px" alt="Biserica_Stavropoleos" />
+
+            </div>
+-->
+            <div class="form-area row">
+                <div class="biography col-xs-12 col-md-4">
+                    <h3>My philosophy!</h3>
+                    <p>A photographer’s job is much more than taking just pictures, it's about finding the right tunes. You have to realize and capture compositions to show the world what the naked eye can sometimes not see.</p>
                 </div>
-                <div class="col-30">
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <div class="left-text col-xs-12 col-md-4">
+                    <h3>Let's get in touch!</h3>
+
+
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                    <input type="text" placeholder="Enter your email">
+                    <textarea cols="30" rows="5" placeholder="Enter your message"></textarea>
+                    <button>Send Email</button>
+                </div>
+
+                <div class="map-area col-xs-12 col-md-4">
+                    <div id="map"></div>
+                    <script>
+                        // Initialize and add the map
+                        function initMap() {
+                            var Mindspace_Victoriei = {
+                                lat: 44.454687,
+                                lng: 26.081476
+                            };
+                            var map = new google.maps.Map(
+                                document.getElementById('map'), {
+                                    zoom: 15,
+                                    center: Mindspace_Victoriei
+                                });
+                            var marker = new google.maps.Marker({
+                                position: Mindspace_Victoriei,
+                                map: map
+                            });
+                        }
+                    </script>
+                    <script async defer src="https://maps.google.com/maps/api/js?key=AIzaSyAh8oqz5ZP2rDY9UoxC5Et8thEIuFYC2Ds&callback=initMap">
+                    </script>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-20">
-                    <label for="lname">Last Name</label>
-                </div>
-                <div class="col-30">
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-20">
-                    <label for="email">Email address</label>
-                </div>
-                <div class="col-30">
-                    <input type="text" id="eml" name="email" placeholder="Your email address...">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-20">
-                    <label for="subject">Subject</label>
-                </div>
-                <div class="col-30">
-                    <textarea id="subject" name="subject" placeholder="Your message.." style="height:100px"></textarea>
-                </div>
-            </div>
-            <div class="row">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
-
-        <div class="Map">
-
-            <h4>Where to find us:</h4>
-
-            <div id="map"></div>
-
-            <script>
-                // Initialize and add the map
-                function initMap() {
-                    var Mindspace_Victoriei = {
-                        lat: 44.454687,
-                        lng: 26.081476
-                    };
-                    var map = new google.maps.Map(
-                        document.getElementById('map'), {
-                            zoom: 15,
-                            center: Mindspace_Victoriei
-                        });
-                    var marker = new google.maps.Marker({
-                        position: Mindspace_Victoriei,
-                        map: map
-                    });
-                }
-            </script>
-            <script async defer src="https://maps.google.com/maps/api/js?key=AIzaSyAh8oqz5ZP2rDY9UoxC5Et8thEIuFYC2Ds&callback=initMap">
-            </script>
         </div>
     </div>
-
 </body>
 
 </html>
