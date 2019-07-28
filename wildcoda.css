@@ -1,37 +1,33 @@
-body {
-  max-height: 100vh;
+* {
+  box-sizing: border-box;
 }
+
+body {
+  background-image:url("images/Casa_Poporului.jpg");
+  overflow: hidden;
+background-repeat: repeat;
+min-height: 100vh;
+}
+
 h1 {
+  position: absolute;
+  left:35%;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-style: oblique;
-font-size: 2.575em;
+font-size: 300%;
 font-weight: normal;
-color:blue;
-text-shadow: 5px 3px yellow;
-text-align: center;
-  
-}
-.container {
-  position: relative;
-  width: 100%;
-  
+color:rgb(190, 190, 207);
+ 
 }
 
 
-.container img {
 
-width: 100%;
-height: 500px;
-filter: grayscale(50%);
-}
-
-
-.container .button {
+.header .button {
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(105, 142, 243, 0.192);
+  background-color:white;
   color: black;
   font-size: 26px;
   padding: 16px 50px;
@@ -42,33 +38,33 @@ filter: grayscale(50%);
 
 }
 
-.container .button:hover {
+.header .button:hover {
   background-color: black;
   color: white;
 
 }
 
-.container .button:active {
+.header .button:active {
   background-color: #656b65;
   box-shadow: 0 8px #666;
 transform: translate3d(4px);
 }
   
-div.relative {
-  position: relative;
-  
- 
-} 
+
+
+.header{
+    display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  padding:2px;
+}
+
 
 .header img {
-  float: left;
+  position: relative;
   width: 100px;
   height: 100px;
   background: #555;
-}
-
-.header h1 {
-  position: relative;
-  top: 18px;
-  left: 10px;
+  top:10%;
 }
