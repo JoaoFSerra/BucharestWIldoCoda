@@ -1,197 +1,202 @@
 header {
-  color:blue;
+  color:rgb(190, 190, 207);
    border: 1px solid black;
   background-color:white;
   text-align: center;
   margin-bottom: 60px;
+  background: url("images/Casa_Poporului.jpg");
+  font-style: oblique;
 }
+
 body {
-  margin-bottom: 0px;
-  padding: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
 }
+
 .social_media_links {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  height: 25px;
-  top:5px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 25px;
+    top: 5px;
 }
+
 .social_media_links img {
-  height: 25px;
+    height: 25px;
 }
 
 .topnav {
-  overflow: hidden;
-  display: flexbox;
-  background-color:black;
-  margin-top: 5px;
+    overflow: hidden;
+    display: flexbox;
+    background-color: black;
+    margin-top: 5px;
 }
 
 .topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  flex-flow: row wrap;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    flex-flow: row wrap;
 }
+
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+    background-color: #ddd;
+    color: black;
 }
 
 .topnav a.active {
-  background-color: blue;
-  color: white;
-  max-width: 40px;
-  max-height: 150px;
+    background-color: blue;
+    color: white;
+    max-width: 40px;
+    max-height: 150px;
 }
 
 .topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
     display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
 }
+
 @media screen and (max-width: 600px) {
-  .topnav.responsive {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+
+.container {
     position: relative;
-  }
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
+    width: 100%;
+    max-width: 800px;
 }
-
- *{box-sizing: border-box}
-
- .container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-}
-
-
-
 
 .image {
-  position: relative;
-  display: block;
-  width: 100%;
-  
-  
+    position: relative;
+    display: block;
+    width: 100%;
 }
-
 
 .overlay {
-  position: absolute; 
-  bottom: 0; 
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1; 
-  width: 90%;
-  transition:20ms;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 90%;
+    transition: 20ms;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
 }
 
-
 .container:hover .overlay {
-  opacity: 1;
-  z-index: 2;
-   transition: 5ms;
-  transition-delay: 18ms;
+    opacity: 1;
+    z-index: 2;
+    transition: 5ms;
+    transition-delay: 18ms;
 }
 
 .image:hover {
-  transform: scale(1.2);
-  z-index: 1;
-  transition: 5ms;
-  transition-delay: 18ms;
+    transform: scale(1.2);
+    z-index: 1;
+    transition: 5ms;
+    transition-delay: 18ms;
 }
-
 
 .grid-container {
-  display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 20px;
-  align-items: stretch;
-  padding:10px;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    padding: 10px;
 }
-.grid-container img {
-  
- border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  width: 400px;
-  height:300px;
 
+.grid-container img {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    height: 300px;
 }
 
 .grid-container img:hover {
-  transform: scale(1.1);
-  z-index: 1;
-  transition: 400ms;
-  transition-delay: 18ms;
+    transform: scale(1.1);
+    z-index: 1;
+    transition: 400ms;
+    transition-delay: 18ms;
 }
 
 .overlay {
-  position: absolute; 
-  bottom: 0; 
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1; 
-  width: 400px;
-  transition:20ms;
-  opacity:0;
-  color: white;
-  font-size: 15px;
-  padding: 10px;
-  text-align: center;
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 400px;
+    transition: 20ms;
+    opacity: 0;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
 }
 
 .grid.container:hover .overlay {
-  opacity: 1;
-  z-index: 2;
-   transition: 5ms;
-  transition-delay: 18ms;
+    opacity: 1;
+    z-index: 2;
+    transition: 5ms;
+    transition-delay: 18ms;
 }
 
-
-
 .footer img {
-  position: relative;
-  margin-top: 18px;
-  float: left;
-  width: 80px;
-  height: 80px;
-  background: #555;
-  left: 20px;
+    position: relative;
+    margin-top: 18px;
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: #555;
+    left: 20px;
 }
 
 .footer h1 {
+<<<<<<< HEAD
   position: relative;
   top: 50px;
   right: 10px;
   text-align: right;
   font-size: 15px;
 color:black;
+=======
+    position: relative;
+    top: 50px;
+    right: 10px;
+    text-align: right;
+    font-size: 15px;
+    color: blue;
+>>>>>>> master
 }
