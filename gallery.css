@@ -1,9 +1,11 @@
 header {
-    color: blue;
-    border: 1px solid black;
-    background-color: white;
-    text-align: center;
-    /* margin-bottom: 60px;*/
+  color:rgb(190, 190, 207);
+   border: 1px solid black;
+  background-color:white;
+  text-align: center;
+  margin-bottom: 60px;
+  background: url("images/Casa_Poporului.jpg");
+  font-style: oblique;
 }
 
 body {
